@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+//Routes
+import { APP_ROUTING } from './app.routes';
+//components
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -13,12 +15,10 @@ import { AboutComponent } from './components/about/about.component';
     NavBarComponent,
     HomeComponent,
     HeroesComponent,
-    AboutComponent
+    AboutComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, APP_ROUTING],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
