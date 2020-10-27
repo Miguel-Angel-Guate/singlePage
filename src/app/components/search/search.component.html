@@ -1,0 +1,12 @@
+<h1> Search <small>{{find}}</small></h1>
+<hr>
+<div class="row" *ngIf="heroes.length == 0">
+    <div class="sol-md-12">
+        <div class="alert alert-info" role="alert">
+            not exist result your search
+        </div>
+    </div>
+</div>
+<div class="card-columns">
+    <app-card-heroe [heroe]="heroe" [index]="heroe.index" *ngFor="let heroe of heroes"></app-card-heroe>
+</div>

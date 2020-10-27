@@ -6,6 +6,7 @@ export interface Heroe {
   img: string;
   firstTime: string;
   casa: string;
+  index?: number;
 }
 
 @Injectable()
@@ -80,9 +81,11 @@ export class HeroesService {
   searchHeroe(find: string): Heroe[] {
     let heroesArr: Heroe[] = [];
     find = find.toLowerCase();
-    for (let heroe of this.heroes) {
+    for (let i = 0; i < this.heroes.length; i++) {
+      let heroe = this.heroes[i];
       let name = heroe.name.toLowerCase();
       if (name.indexOf(find) >= 0) {
+        heroe.index = i;
         heroesArr.push(heroe);
       }
     }
