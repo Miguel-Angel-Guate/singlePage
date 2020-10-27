@@ -37,3 +37,7 @@ body {
 .fadeIn {
     animation-name: fadeIn;
 }
+
+.comicImg {
+    max-width: 200px;
+}
